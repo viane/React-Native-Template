@@ -16,7 +16,7 @@ A simple start up template for react native mobile app on both iOS and Android p
 ### Run
    Requirements:
 
-- Make sure you have [NodeJS](https://nodejs.org/en/download/) installed
+   - Make sure you have [NodeJS](https://nodejs.org/en/download/) installed
      ```sh
      # Or use homebrew
      brew install node
