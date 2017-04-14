@@ -39,6 +39,8 @@ A simple start up template for react native mobile app on both iOS and Android p
 
      [Android Studio](https://developer.android.com/studio/install.html)
 
+   To Test and Run:
+
    - Download and unzip the repo, then cd to the root of the template.
 
    - Run on desired emulator
