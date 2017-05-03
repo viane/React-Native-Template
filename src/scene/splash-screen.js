@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StatusBar, StyleSheet, Text, View, Image} from 'react-native';
 import styles from '../style/style';
 
 class SplashScreen extends Component {
@@ -21,7 +21,6 @@ class SplashScreen extends Component {
     }
 
     render() {
-
         return (
           this.state.done ? (
             //if done, show all nested children
@@ -29,6 +28,9 @@ class SplashScreen extends Component {
           ) : (
             //else keep render splash screen
                 <View style={styles.splashScreenContainer}>
+                  <StatusBar
+                    hidden={true}
+                  />
                   <Image style={styles.splashScreenLogo} source={this.props.logo} resizeMode={Image.resizeMode.center}/>
                     <Text style={[styles.splashScreenFontColor, styles.splashScreenFontTitle]}>
                         Splash Screen Title
@@ -36,7 +38,6 @@ class SplashScreen extends Component {
                     <Text style={[styles.splashScreenFontColor, styles.splashScreenFontFooter]}>
                         Power by React Native
                     </Text>
-
                 </View>
             )
         );
