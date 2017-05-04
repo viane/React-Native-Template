@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {StatusBar,StyleSheet, Text, View, NavigatorIOS} from 'react-native';
+import React, {Component,PropTypes} from 'react';
+import {StatusBar,StyleSheet, Text, View, NavigatorIOS,Navigator} from 'react-native';
 import styles from './style/style';
 import SplashScreen from '../src/scene/splash-screen';
 import HomeScene from '../src/scene/home';
@@ -7,7 +7,6 @@ import SideMenu from 'react-native-side-menu';
 import Menu from '../src/assets/menu';
 import Icon from 'react-native-vector-icons/FontAwesome';
 class App extends Component {
-
     constructor(props){
       super(props);
       this.state={
@@ -50,11 +49,13 @@ class App extends Component {
           // customize the splash screen duration by setting duration property, default is 1.5 seconds
           // customize the splash screen iamge path by setting logo property, default is ../src/assets/image/logo.jpeg
             <SplashScreen duration={2000} logo={require('../src/assets/image/logo.png')}>
-              <SideMenu
-                menu={menu}
-                isOpen={this.state.isMenuSideBarOpen}
-                onChange={(isOpen)=>{this.updateMenuState(isOpen)}}
-              >
+
+                <SideMenu
+                  menu={menu}
+                  isOpen={this.state.isMenuSideBarOpen}
+                  onChange={(isOpen)=>{this.updateMenuState(isOpen)}}
+                >
+
                 <StatusBar
                   backgroundColor="blue"
                   barStyle="light-content"
@@ -75,9 +76,9 @@ class App extends Component {
                 >
                 </NavigatorIOS>
               </SideMenu>
+
             </SplashScreen>
         );
     }
 }
-
 export default App;
